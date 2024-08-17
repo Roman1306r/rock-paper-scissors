@@ -391,10 +391,13 @@
     } 
     .playgame__actions {
       left: 5px;
-      bottom: 100px;
+      bottom: calc(var(--index) * 8);
       flex-direction: column;
-      gap: 20px;
+      gap: 5px;
       transform: translateX(0%);
+      & * {
+        font-size: calc(var(--index) * 1);
+      }
     }
   }
   .game__item {
