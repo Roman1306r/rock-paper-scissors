@@ -72,13 +72,13 @@ const PlayGame = memo(({setLogicGame, logicGame, getSkinetItem}: IGameProps) => 
                     </div>
                     <div className='playgame__actions'>
                         <Popover title={t('play')}>
-                            <Button shape='round' ghost size='large' className='btn' onClick={() => setControlGame({...controlGame, isBegin: false})}  icon={<FaCheck />} type="default" />
+                            <Button shape='round' ghost size={window.innerWidth < 767 ? 'small' : 'large'} className='btn' onClick={() => setControlGame({...controlGame, isBegin: false})}  icon={<FaCheck />} type="default" />
                         </Popover>
                         <Popover title={t('againgame')}>
-                            <Button shape='round' ghost size='large' className='btn' onClick={() => checkWinner(getSkinetItem())}  icon={<GrPowerReset />} type="default" />
+                            <Button shape='round' ghost size={window.innerWidth < 767 ? 'small' : 'large'} className='btn' onClick={() => checkWinner(getSkinetItem())}  icon={<GrPowerReset />} type="default" />
                         </Popover>
                         <Popover title={t('save')}>
-                            <Button onClick={() => setControlGame({...controlGame, isSave: true})} shape='round' ghost size='large' className='btn'  icon={<TfiSave />} type="default" />
+                            <Button onClick={() => setControlGame({...controlGame, isSave: true})} shape='round' ghost size={window.innerWidth < 767 ? 'small' : 'large'} className='btn'  icon={<TfiSave />} type="default" />
                         </Popover>  
                     </div>
                     <div title={skinet?.title || ''} className={winIndicator < 0 || winIndicator === 2 ? 'game__item skinet' : 'game__item lose skinet'} >
