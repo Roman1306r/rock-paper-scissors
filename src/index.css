@@ -113,7 +113,7 @@ body::after {
 
 @media (max-width: 767px) {
   body::before {
-    display: none;
+    content: none;
     left: 50%;
     top: 0%;
     transform: translate(-50%, -50%);
